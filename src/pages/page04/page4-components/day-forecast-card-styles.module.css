@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.dayForecastCard {
+    border-radius: 20px;
+    padding: 2em;
+    height: 70%;
+    min-width: 200px;
+    display: grid;
+    grid-template-rows: 0.3fr 1.3fr 0.8fr;
+    place-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    font-family: "Noto Sans", sans-serif;
+    animation: fadeInAnimationCard1 ease-out 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    transition: all 0.5s ease-out;
+}
+
+.header h3 {
+    margin: 0;
+    letter-spacing: 0.15em;
+    font-size: 1.5em;
+    font-weight: light;
+}
+
+.info {
+    display: flex;
+}
+
+.info > h3 {
+    margin: 0;
+    font-size: 3em;
+}
+
+.info::after {
+	content: "\00b0 C";
+	font-family: "Noto Sans", sans-serif;
+	font-weight: bold;
+    font-size: 1.5em;
+}
+
+@keyframes fadeInAnimationCard1 {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.dayForecastCard:hover {
+    background: rgba(255, 255, 255, 0.14);
+}
+
+@media only screen and (max-width: 2160px) {
+    .dayForecastCard {
+        min-width: 160px;
+        height: 70%;
+    }
+}
+
+@media only screen and (max-width: 1630px) {
+    .dayForecastCard {
+        grid-template-rows: none;
+        grid-template-columns: 1fr 1fr 1fr;
+        height: 10%;
+        min-width: 70%;
+        margin-top: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .dayForecastCard {
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .dayForecastCard {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .icon > img {
+        height: 50px;
+        width: 50px;
+    }
+}
