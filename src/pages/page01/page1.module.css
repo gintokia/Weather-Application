@@ -1,0 +1,234 @@
+.main {
+  font-family: "Roboto", sans-serif;
+  animation: fadeInAnimationCard ease-out 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimationCard {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+.col1 {width:8.33%}
+.col2 {width:16.66%}
+.col3 {width:25%}
+.col4 {width:33.33%}
+.col5 {width:41.66%}
+.col6 {width:50%}
+.col7 {width:58.33%}
+.col8 {
+  margin-bottom: 100px !important;
+  color: #0d0d0d;
+  background-color: #fff;
+	border-radius: 10px;
+  border: 2px solid #f3f2f2;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	overflow: hidden;
+  font-size: 20px;
+  padding-right: 2rem;
+  padding-left: 2rem;
+}
+
+.strengthsAndWeakness {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+}
+
+
+.all {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.all > * {
+  margin-left: 3rem;
+  margin-right: 3rem;
+}
+
+.all ul {
+  line-height: 1.7rem;
+  margin-top: 1rem;
+}
+
+
+
+
+.col-9 {width:75%}
+.col-10 {width:83.33%}
+.col-11 {width:91.66%}
+.col-12 {width:100%}
+[class*="col-"] {float:left; padding:15px}
+.row::after {content:""; clear:both; display:table}
+
+
+
+
+.h1Style {
+  text-align: center;
+  margin-top: 1rem;
+  color: #0d0d0d;
+  font-size: 3rem;
+  font-family: "Noto Sans", sans-serif;
+	letter-spacing: 0.25rem;
+  line-height: 5rem;
+}
+
+.h1Style > h1{
+  margin: 0;
+}
+
+.reactWord {
+	font-family: "Segoue UI", sans-serif;
+	letter-spacing: 0;
+	font-weight: bold;
+	font-size: 2.4rem;
+	color: #61dafb;
+  background-color: #282c34;
+  padding: 0.5rem;
+  width: 105px;
+  margin: 0;
+  margin-left: 1rem;
+}
+
+.reactWordHeader {
+	font-family: "Segoue UI", sans-serif;
+	letter-spacing: 0;
+	font-weight: bold;
+	font-size: 3.5rem;
+	color: #61dafb;
+  background-color: #282c34;
+  padding: 0.5rem;
+  width: 141px;
+  margin: 0;
+}
+
+.expressWordHeader {
+  font-family: 'Source Sans Pro', sans-serif;	
+  letter-spacing: 0;
+	font-weight: lighter;
+	font-size: 4.4rem;
+	color: #353535;
+  margin: 0;
+  margin-top: 2rem;
+}
+
+.expressWord {
+  font-family: 'Source Sans Pro', sans-serif;	
+  letter-spacing: 0;
+	font-weight: 500;
+	font-size: 3rem;
+	color: #353535;
+  margin: 0;
+  margin-left: 0.8rem;
+  margin-top: 2rem;
+  border-bottom: 0.5px solid black;
+  width: 150px;
+}
+
+.h2Style {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  text-align: center;
+  font-family: "Noto sans", sans-serif;
+  font-size: 42px;
+	letter-spacing: 0.25rem;
+}
+
+.h3Style {
+  margin-left: 1.1rem;
+}
+
+.pStyle {
+  margin-left: 1.1rem;
+  margin-bottom: 0;
+  font-size: 1.3rem;
+}
+
+.pStyle > p {
+  margin: 0;
+}
+
+@media only screen and (max-width:1280px) {
+  .col8 {
+    font-size: 18px;
+  }
+  .h2Style {
+    margin-bottom: 1.5rem;
+    font-size: 2.2rem;
+  }
+  .reactWord {
+    font-size: 1.9rem;
+    width: 85px;
+  }
+  .expressWord {
+    font-size: 2.5rem;
+    width: 125px;
+  }
+  .all > * {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+} 
+
+@media only screen and (max-width:1050px) {
+  .all {
+    display: flex;
+    flex-direction: column;
+  }
+} 
+
+@media only screen and (max-width:800px) {
+  .h1Style {
+    font-size: 2.5rem;
+  }
+  .reactWordHeader {
+    font-size: 3rem;
+  }
+  .expressWordHeader {
+    font-size: 4rem;
+  }
+  .col8 {
+    padding-left: 1rem;
+    font-size: 16px;
+  }
+} 
+@media only screen and (max-width:720px) {
+  .h1Style {
+    font-size: 2.5rem;
+  }
+  .reactWordHeader {
+    font-size: 2.5rem;
+  }
+  .expressWordHeader {
+    font-size: 3.5rem;
+  }
+  .h2Style {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width:600px) {
+  .h1Style {
+    font-size: 2rem;
+  }
+  .reactWordHeader {
+    font-size: 2rem;
+  }
+  .expressWordHeader {
+    font-size: 3rem;
+  }
+  .h2Style {
+    font-size: 1.8rem;
+  }
+}
+
+@media only screen and (max-width:480px) {
+  .all > * {
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+  }
+} 
