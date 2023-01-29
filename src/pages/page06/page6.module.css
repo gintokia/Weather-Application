@@ -1,0 +1,52 @@
+h1 {
+  text-align: center;
+  margin: 40px 0;
+  color: #0d0d0d;
+}
+
+.main {
+  animation: fadeInAnimationCard ease-out 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimationCard {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.ref{
+  margin-bottom: 50px !important;
+  color: #0d0d0d;
+  background-color: #fff;
+	border-radius: 10px;
+  border: 2px solid #f3f2f2;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	max-width: 100%;
+	margin: auto;
+  /*
+	overflow: hidden;
+  */
+	width: 70%;
+}
+.ref h3{
+  text-align: center;
+  padding-top: 20px;
+}
+
+.ref ul{
+  padding: 0 30px;
+  text-indent: -1.5rem; 
+  margin-left: 20px; 
+  margin-right: 20px;
+  list-style: none; 
+}
+
+.ref li{
+  line-height: 2.5rem;
+  overflow-wrap: break-word;
+}
