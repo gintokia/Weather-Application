@@ -1,0 +1,21 @@
+h1{
+  text-align: center;
+  padding-top: 20px;
+}
+
+.main {
+  min-height: 89.2vh;
+  animation: fadeInAnimationCard ease-out 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  padding-bottom: 30px;
+}
+
+@keyframes fadeInAnimationCard {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
