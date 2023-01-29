@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Roboto&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Source+Sans+Pro:wght@300&display=swap');
+
+.mainContainer {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	min-height: 100vh;
+	font-size: 16px;
+    animation: fadeInAnimationCard ease-out 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimationCard {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.textContainer {
+	font-size: 1rem;
+	margin: 0 auto;
+	margin-top: 1rem;
+	padding-left: 2rem;
+	padding-right: 2rem;
+	min-height: 100vh;
+	max-width: 80rem;
+	/* border: solid 2px black; */
+	font-family: "Roboto", sans-serif;
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+}
+
+.headerContainer {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding-left: 9rem;
+	padding-right: 9rem;
+}
+
+.headerContainer > h1 {
+	font-size: 3em;
+	font-family: "Noto Sans", sans-serif;
+	font-weight: bold;
+	margin: 0;
+	letter-spacing: 0.25rem;
+    line-height: 5rem;
+    text-align: center;
+}
+
+.reactWord {
+	font-family: "Segoue UI", sans-serif;
+	letter-spacing: 0;
+	font-weight: bold;
+	font-size: 3.5rem;
+	color: #61dafb;
+    background-color: #282c34;
+    padding: 0.5rem;
+}
+
+.expressWord {
+    font-family: 'Source Sans Pro', sans-serif;	
+    letter-spacing: 0;
+	font-weight: lighter;
+	font-size: 4.4rem;
+	color: #353535;
+}
+
+
+.imgContainer {
+	display: grid;
+	place-items: center;
+}
+
+.sectionImgContainer {
+	display: grid;
+	place-items: center;
+}
+
+.sectionImgContainer > img{
+	width: 100%;
+}
+
+.imgContainer > img {
+	width: 80%;
+	border-radius: 10px;
+}
+
+
+.textContainer > section {
+	margin-left: 9rem;
+	margin-right: 9rem;
+	font-size: 1.5rem;
+}
+
+.textContainer > section > h3 {
+	letter-spacing: 0.1rem;
+	margin: 0;
+	font-size: 2.4rem;
+	font-family: "Roboto", sans-serif;
+	text-transform: capitalize;
+}
+
+.textContainer > section > * {
+	font-size: 1.4rem;
+	font-family: "Roboto", sans-serif;
+    line-height: 2.7rem;
+}
+
+.textContainer > section li {
+	font-size: 1.4rem;
+}
+
+.textContainer > section > p {
+	margin-left: 0.15rem;
+}
+
+@media screen and (max-width: 480px) {
+	.textContainer {
+		padding-left: 2em;
+		padding-right: 2em;
+	}
+	.headerContainer > h1 {
+		font-size: 2em;
+	}
+}
+
+@media screen and (max-width: 1050px) {
+	.textContainer > section {
+		margin-left: 5rem;
+		margin-right: 5rem;
+	}
+	.headerContainer > h1 {
+		font-size: 2.5rem;
+	}
+	.textContainer > section > h3 {
+		letter-spacing: 0.1rem;
+		margin: 0;
+		font-size: 2.4rem;
+	}
+
+	.textContainer > section > * {
+		font-size: 1.4rem;
+		font-family: "Roboto", sans-serif;
+		line-height: 2.7rem;
+	}
+
+	.textContainer > section li {
+		font-size: 1.4rem;
+	}
+
+	.textContainer > section > p {
+		margin-left: 0.15rem;
+	}
+}
+
+@media screen and (max-width: 730px) {
+	.textContainer > section {
+		margin-left: 3rem;
+		margin-right: 3rem;
+	}
+	.headerContainer {
+		padding-left: 3rem;
+		padding-right: 3rem;
+	}
+	.headerContainer > h1 {
+		font-size: 2.1rem;
+	}
+
+	.reactWord {
+		font-size: 3rem;
+	}
+
+	.expressWord {
+		font-size: 4rem;
+	}
+	.textContainer > section > h3 {
+		font-size: 2rem;
+	}
+
+	.textContainer > section > * {
+		font-size: 1.2rem;
+		font-family: "Roboto", sans-serif;
+		line-height: 2.7rem;
+	}
+
+	.textContainer > section li {
+		font-size: 1.2rem;
+	}
+
+	.textContainer > section > p {
+		margin-left: 0.15rem;
+	}
+}
+
+
+@media screen and (max-width: 480px) {
+	.headerContainer {
+		padding-left: 1rem;
+		padding-right: 1rem;
+		margin: 0;
+	}
+	.headerContainer > h1 {
+		font-size: 1.5rem;
+	}
+
+	.reactWord {
+		font-size: 2rem;
+	}
+
+	.expressWord {
+		font-size: 3rem;
+	}
+	.textContainer > section {
+		margin-left: 1rem;
+		margin-right: 1rem;
+	}
+	.textContainer > section > h3 {
+		font-size: 1.3rem;
+	}
+
+	.textContainer > section > * {
+		font-size: 1rem;
+		font-family: "Roboto", sans-serif;
+		line-height: 2.7rem;
+	}
+
+	.textContainer > section li {
+		font-size: 1rem;
+	}
+
+}
+
+	
