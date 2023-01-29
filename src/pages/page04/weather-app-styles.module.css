@@ -1,0 +1,444 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+.mainContainer {
+    animation: fadeInAnimation ease-out 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+	font-size: 20px;
+    height: 96vh;
+	display: grid;
+	place-items: center;
+	grid-template-rows: 1fr 1fr;
+	font-family: "Noto Sans", sans-serif;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.currentWeather {
+	height: 100%;
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 1.1fr;
+	place-items: center;
+}
+
+.tempIconLocationDate {
+	height: 70%;
+	width: 75%;
+	display: grid;
+	grid-template-rows: 0.05fr 1.5fr;
+	padding: 2.5em;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 40px;
+    animation: fadeInAnimationCard ease-out 5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    transition: all 0.5s ease-out;
+}
+
+@keyframes fadeInAnimationCard {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.tempIconLocationDate:hover {
+    background: rgba(255, 255, 255, 0.1);
+    
+}
+
+.locationStyles {
+	padding-left: 4em;
+}
+.locationStyles > h3 {
+	font-size: 3em;
+	font-weight: 900;
+    margin: 0;
+    letter-spacing: 0.15em;
+}
+
+.date {
+	padding-left: 4em;
+}
+.date h3 {
+	font-size: 2em;
+	font-weight: 900;
+    margin: 0;
+    letter-spacing: 0.15em;
+}
+
+
+.tempIcon {
+	cursor: default;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1.5fr 1fr 0.3fr;
+}
+
+.tempIcon img {
+    height: 400px;
+    width: 400px;
+}
+
+.temp {
+	font-size: 9em;
+	display: flex;
+}
+
+.temp > h2 {
+    margin: 0;
+    letter-spacing: 0.1em;
+}
+
+
+.temp::after {
+	content: "\00b0 C";
+	font-family: "Noto Sans", sans-serif;
+	font-weight: bold;
+    font-size: 0.6em;
+    margin-left: -40px;
+}
+
+.extraDataContainer {
+	height: 70%;
+	width: 75%;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr;
+	place-items: center;
+    border-radius: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    animation: fadeInAnimationCard ease-out 5s;
+	padding: 2.5em;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    transition: all 0.5s ease-out;
+}
+
+
+.extraDataContainer:hover {
+    background: rgba(255, 255, 255, 0.14);
+}
+
+::selection {
+    background: rgba(150, 150, 150, 0.22);
+}
+
+.extraData > p {
+    margin: 0;
+    font-size: 1.7em;
+    font-weight: light;
+    font-family: "Noto Sans", sans-serif;
+    letter-spacing: 0.1em;
+}
+
+.quote {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    place-items: center;
+    grid-template-rows: 0.6fr 0.5fr;
+}
+
+.quote > h3 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: bold;
+    font-family: "Noto Sans", sans-serif;
+    letter-spacing: 0.05em;
+}
+
+.quote > h4 {
+    margin: 0;
+    font-size: 1.3em;
+    font-weight: lighter;
+    font-family: "Noto Sans", sans-serif;
+    text-align: center;
+}
+
+.data {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.feelsLike {
+    margin: 0;
+}
+
+
+.feelsLike::after {
+	content: "\00b0 C";
+	font-family: "Noto Sans", sans-serif;
+	font-weight: bold;
+}
+
+.high::after {
+	content: "\00b0 C";
+	font-family: "Noto Sans", sans-serif;
+	font-weight: bold;
+}
+
+.low::after {
+	content: "\00b0 C";
+	font-family: "Noto Sans", sans-serif;
+	font-weight: bold;
+}
+
+.feelsLikeTemp, .humValue, .precValue, .windValue, .highTempValue, .lowTempValue {
+    font-weight: bold;
+}
+
+
+.weekForecast {
+	width: 100%;
+	height: 100%;
+	display: flex;
+    flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+@media only screen and (max-width: 2160px) {
+    .tempIconLocationDate {
+        font-size: 1rem;
+    }
+    .temp {
+        font-size: 8rem;
+    }
+
+    .extraDataContainer {
+        font-size: 1rem;
+    }
+    .weekForecast {
+        font-size: 1rem;
+    }
+    .tempIcon > img {
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width: 1730px) {
+    .date {
+        margin-left: 0.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media only screen and (max-width: 1630px) {
+    .weekForecast {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1.1rem;
+    }
+    .date {
+        padding-left: 2em;
+    }
+    .locationStyles {
+        padding-left: 2em;
+    }
+    .temp {
+        font-size: 7rem;
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    .date {
+        font-size: 0.8rem;
+    }
+    .tempIcon > img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media only screen and (max-width: 1350px) {
+    .date {
+        font-size: 0.7rem;
+    }
+    .locationStyles {
+        padding-left: 1.7em;
+    }
+    .extraDataContainer {
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width: 1280px) {
+    .date {
+        font-size: 0.55rem;
+    }
+    .tempIconLocationDate {
+        font-size: 0.8rem;
+    }
+    .locationStyles {
+        padding-left: 2em;
+    }
+    .temp {
+        font-size: 5rem;
+    }
+    .tempIcon > img {
+        width: 200px;
+        height: 200px;
+    }
+    .temp::after {
+        font-size: 3rem;
+        margin-left: -0.5rem;
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+    .date {
+        font-size: 0.55rem;
+        font-size: 0.5rem;
+    }
+    .tempIconLocationDate {
+        font-size: 0.8rem;
+    }
+    .locationStyles {
+        font-size: 0.7rem;
+    }
+    .temp {
+        font-size: 4rem;
+    }
+    .temp::after {
+        font-size: 2rem;
+        margin-left: -0.5rem;
+    }
+    .tempIcon > img {
+        width: 150px;
+        height: 150px;
+    }
+    .extraDataContainer {
+        font-size: 0.6rem;
+    }
+    .quote > h4 {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 850px) {
+    .currentWeather {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .tempIconLocationDate {
+        margin-bottom: 1.5rem;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+    .extraDataContainer {
+        font-size: 0.8rem;
+        gap: 30px;
+        margin-bottom: 0.5rem;
+    }
+    .temp {
+        font-size: 6rem;
+    }
+    .temp::after {
+        font-size: 4rem;
+        margin-left: -0.5rem;
+    }
+    .tempIcon > img {
+        width: 300px;
+        height: 300px;
+    }
+    .quote {
+        display: flex;
+    }
+    .quote > h3 {
+        display: none;
+    }
+    .quote > h4 {
+        font-size: 1.2rem;
+    }
+
+}
+@media only screen and (max-width: 730px) {
+    .extraDataContainer {
+        font-size: 0.8rem;
+        gap: 30px;
+    }
+    .temp {
+        font-size: 5rem;
+    }
+    .temp::after {
+        font-size: 3rem;
+        margin-left: -0.5rem;
+    }
+    .tempIcon > img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .data {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        font-size: 0.8rem;
+    }
+    .extraDataContainer {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .extraDataContainer {
+        font-size: 0.6rem;
+        gap: 30px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+    .tempIcon {
+        display: flex;
+        flex-direction: column;
+    }
+    .locationStyles {
+        font-size: 0.6rem;
+    }
+    .date {
+        font-size: 0.5rem;
+        padding-left: 0.8rem;
+    }
+    .temp {
+        font-size: 6rem;
+        margin-left: 40px;
+    }
+    .tempIcon > img {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .tempIconLocationDate {
+        margin-top: 30px;
+    }
+    .extraDataContainer {
+        font-size: 0.8rem;
+    }
+}
+
