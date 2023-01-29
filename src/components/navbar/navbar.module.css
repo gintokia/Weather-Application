@@ -1,0 +1,110 @@
+body {
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: rgb(246, 247, 249);
+  position: relative;
+}
+
+.logo {
+  display: inline-block;
+  color: rgb(93, 93, 94);
+  font-size: 18px;
+  padding: 14px 5vw;
+  text-align: center;
+  font-weight:400;
+}
+
+.Btn {
+  display: none;
+}
+
+.Links {
+  display: inline;
+  float: right;
+  font-size: 17px;
+}
+
+.Link {
+  display: inline-block;
+  padding: 14px 8px;
+  text-decoration: none;
+  color: rgb(127, 125, 129);
+}
+
+.lastLink {
+  margin-right: 5vw;
+}
+
+.Link:hover {
+  color: #0642bbb9;
+}
+
+.Check {
+  display: none;
+}
+
+@media (max-width: 882px) {
+  .Btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    color: rgb(93, 93, 94);
+
+  }
+  .Btn  label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .Btn  label:hover, .nav  .Check:checked ~ .Btn > label {
+    color: #0642bbb9;
+  }
+
+  .Btn label span {
+    display: block;
+    color: rgb(93, 93, 94);
+    font-size: 30px;
+    margin-top: -9px;
+  }
+  .Links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: rgb(246, 247, 249);
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+    padding-left: 4vw;
+    z-index: 500;
+  }
+  .Link {
+    display: block;
+    width: 100%;
+  }
+  .Check:not(:checked) ~ .Links {
+    height: 0px;
+  }
+  .Check:checked ~ .Links {
+    height: 310px;
+    overflow-y: auto;
+  }
+
+}
+
+@media (max-width: 300px) {
+  .logo {
+
+    font-size: 16px;
+    padding-top: 17px;
+    font-weight:300;
+  }
+}
